@@ -1,0 +1,15 @@
+<% if notice %>
+	<p id="notice"><%= notice %></p>
+<% end %>
+	<h1>Meu Catálogo</h1>
+		<% @meus_produtos.each do |pr| %>
+<div class="entry">	
+		<%= image_tag(pr.image_url) %>
+		<h3> <%= pr.title  %> </h3>
+		<%= sanitize(pr.description)  %> 
+	<div class="price_line">
+		<span class="price"><%= number_to_currency pr.price %></span> 
+		<%= button_to 'Adicionar ao Carrinho', line_items_path(product_id: pr)%>
+	</div>
+</div>
+<% end %>
