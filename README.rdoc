@@ -1,3 +1,5 @@
+This is a copy from agile book .. i'm just training rails .. and i just followed along the book ..
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
