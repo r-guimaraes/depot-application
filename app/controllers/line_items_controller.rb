@@ -14,7 +14,7 @@ class LineItemsController < ApplicationController
   # GET /line_items/1.json
   def show
     @line_item = LineItem.find(params[:id])
-
+    @cart = current_cart
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @line_item }
