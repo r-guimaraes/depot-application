@@ -3,7 +3,11 @@
 one:
   product_id: 1
   cart_id: 1
+  product: ruby
+  order: one
 
 two:
   product_id: 1
   cart_id: 1
+  product: ruby
+  order: one
