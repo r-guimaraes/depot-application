@@ -3,7 +3,7 @@ class CartsController < ApplicationController
   # GET /carts.json
   def index
     @carts = Cart.all
-
+    @cart = current_cart
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @carts }
@@ -83,7 +83,7 @@ class CartsController < ApplicationController
     session[:cart_id] = nil
 
     respond_to do |format|
-      format.html { redirect_to store_url, notice: "Seu carrinho esta vazio" }
+      format.html { redirect_to store_url}
       format.json { head :no_content }
     end
   end
