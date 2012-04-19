@@ -6,6 +6,6 @@
 	<td colspan="2">Total</td>
 	<td class="total_cell"><%= number_to_currency(cart.total_price) %></td> </tr>
 </table>
-
-<%= button_to "Esvaziar Carrinho", cart, method: :delete, confirm: "Deletar Carrinho mesmo?" %>
+<%= button_to "Finalizar Compra", new_order_path, method: :get %>
+<%= button_to "Esvaziar Carrinho", cart, method: :delete, confirm: "Deletar Carrinho?" %>
 <% end %>
